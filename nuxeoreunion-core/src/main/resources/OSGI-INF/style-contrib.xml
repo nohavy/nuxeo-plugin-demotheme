@@ -1,0 +1,84 @@
+<component name="org.nuxeo.reunion.style">
+
+  <extension target="org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService" point="loginScreen">
+    <loginScreenConfig>
+      <bodyBackgroundStyle>url("${org.nuxeo.ecm.contextPath}/img/screen.jpg") 0px 0px no-repeat #000</bodyBackgroundStyle>
+      <disableBackgroundSizeCover>false</disableBackgroundSizeCover>
+      <headerStyle>display: none;</headerStyle>
+      <newsIframeUrl></newsIframeUrl>
+      <footerStyle>display: none;</footerStyle>
+      <loginBoxBackgroundStyle>none 0 0 #ffffff</loginBoxBackgroundStyle>
+      <loginBoxWidth>300px</loginBoxWidth>
+      <logoUrl>${org.nuxeo.ecm.contextPath}/img/</logoUrl>
+      <logoAlt>logo</logoAlt>
+      <logoWidth></logoWidth>
+      <logoHeight>40px</logoHeight>
+    </loginScreenConfig>
+  </extension>
+
+
+  <extension target="org.nuxeo.theme.styling.service" point="flavors">
+    <flavor name="reunion" extends="default">
+      <logo>
+        <path>/img/logo-reunion.png</path>
+        <previewPath>/img/logo-reunion.png</previewPath>
+        <width></width>
+        <height>40px</height>
+        <title>logo</title>
+      </logo>
+    </flavor>
+  </extension>
+
+  <extension target="org.nuxeo.theme.styling.service" point="resources">
+    <resource name="reunion.css">
+      <path>css/reunion.css</path>
+    </resource>
+  </extension>
+
+  <extension target="org.nuxeo.theme.styling.service" point="pages">
+    <themePage name="galaxy/popup">
+      <defaultFlavor>region</defaultFlavor>
+      <resources append="true">
+        <resource>reunion.css</resource>
+      </resources>
+    </themePage>
+    <themePage name="galaxy/print">
+      <defaultFlavor>region</defaultFlavor>
+      <resources append="true">
+        <resource>reunion.css</resource>
+      </resources>
+    </themePage>
+    <themePage name="admin/default">
+      <defaultFlavor>region</defaultFlavor>
+      <resources append="true">
+        <resource>reunion.css</resource>
+      </resources>
+    </themePage>
+    <themePage name="userCenter/default">
+      <defaultFlavor>region</defaultFlavor>
+      <resources append="true">
+        <resource>reunion.css</resource>
+      </resources>
+    </themePage>
+    <themePage name="search/default">
+      <defaultFlavor>region</defaultFlavor>
+      <resources append="true">
+        <resource>reunion.css</resource>
+      </resources>
+    </themePage>
+    <themePage name="dam/default">
+      <defaultFlavor>region</defaultFlavor>
+      <resources append="true">
+        <resource>reunion.css</resource>
+      </resources>
+    </themePage>
+    <themePage name="galaxy/default">
+      <flavors append="true"/>
+      <defaultFlavor>region</defaultFlavor>
+      <resources append="true">
+        <resource>reunion.css</resource>
+      </resources>
+    </themePage>
+  </extension>
+
+</component>
